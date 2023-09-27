@@ -14,9 +14,7 @@
         {
             document.getElementById("talk").innerHTML="what do you mean you don't know?";
         }
-</script>
 
-<script>
         function touch()
         {
             var x = document.getElementById("conversation");
@@ -29,21 +27,17 @@
                     x.style.display = "none";
                 }
         }
-</script>
-
-<script>
         function dogs()
         {
             document.getElementById("dog1").src = "dog2.jpeg";
         }
-</script>
 
-<script>
-        function wordchange1(words)
+        function wordchange1(word)
         {
-            words.innerHTML="stop ignoring him";
+            word.innerHTML="stop ignoring him";
         }
 </script>
+
 
 </head>
 
@@ -76,7 +70,7 @@
     <p>*poke*</p>
     <br>
 
-    <button onclick="touch()" onclick="wordchange1(this)">keep ignoring him</button>
+    <button onclick="touch(); wordchange1(this)">keep ignoring him</button>
 
 
     <div id="conversation">

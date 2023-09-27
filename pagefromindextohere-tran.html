@@ -2,6 +2,15 @@
 
 <head>
     <title>Lab1 HTML - next page - Tran</title>
+
+    <script>
+            function field()
+            {
+                document.getElementById("required").style.display = "block";
+            }
+    </script>
+
+
 </head>
 
 <body>
@@ -10,7 +19,7 @@
     <img width="30%" src="library.jpg"/>
     <div> here's a list of books a like. (some are bad, mid or just turn off your brain, some adapted to another media which is better than the original source material)
         <p>sorted by genre (sometime books listed have multiple genre but only categorise by the main one):</p>
-        <h2> if you don't feel like scrolling through it, you can use the following tools to go directly to the genre desired instead.</h2>
+        <h2> if you don't feel like scrolling through it, you can use the following tools to go directly to the genre desired instead. (None of them works)</h2>
 
         <form action="/action_page.php">
             <textarea name="message" rows="10" cols="30">These are the available genre: Fantasy, Modern, Sci-fi and Modern </textarea>
@@ -28,8 +37,10 @@
         <form>
             <br>
             <label for="genre">Genre:</label>
-            <input type="text" restrict id="genre" pattern="(fantasy|modern|mystery|sci-fi)">  
-            <input type="submit">                  
+            <input type="text" restrict onblur="field()" id="genre" pattern="(fantasy|modern|mystery|sci-fi)">  
+            <input type="submit">
+            <p id="required" style="display:none;">This field is required</p>
+                              
         </form>
 
         <ul>

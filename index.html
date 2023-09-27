@@ -20,13 +20,13 @@
         function touch()
         {
             var x = document.getElementById("conversation");
-            if (x.style.display === "block") 
+            if (x.style.display === "none") 
                 {
-                    x.style.display = "none";
+                    x.style.display = "block";
                 } 
                 else 
                 {
-                    x.style.display = "block";
+                    x.style.display = "none";
                 }
         }
 </script>
@@ -62,7 +62,7 @@
     <p>*poke*</p>
     <br>
 
-    <button onclick="touch()">*poke*</button>
+    <button onclick="touch()">keep ignoring</button>
     <div id="conversation">
     
     <p id="talk"> what time is it?</p>

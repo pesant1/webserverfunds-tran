@@ -38,6 +38,13 @@
         }
 </script>
 
+<script>
+        function wordchange1(words)
+        {
+            words.innerHTML="stop ignoring him";
+        }
+</script>
+
 </head>
 
 <body>
@@ -69,7 +76,9 @@
     <p>*poke*</p>
     <br>
 
-    <button onclick="touch()">keep ignoring him</button>
+    <button onclick="touch()" onclick="wordchange1(this)">keep ignoring him</button>
+
+
     <div id="conversation">
     
     <p id="talk"> what time is it?</p>

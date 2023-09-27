@@ -8,6 +8,17 @@
             {
                 document.getElementById("required").style.display = "block";
             }
+
+            function text()
+            {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() 
+                {
+                    document.getElementById("stuff").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "booklist");
+                xhttp.send();
+            }    
     </script>
 
 
@@ -50,6 +61,10 @@
             <p> American God</p>
         </ul>
     </div>
+
+    <button onclick="text()"> books to be put on website </button>
+    <p id="stuff"></p>
+
 
 <a href="https://www.amazon.ca/s?k=kindle+books&hvadid=588000978868&hvdev=c&hvlocphy=1002604&hvnetw=g&hvqmt=e&hvrand=16848873007375407184&hvtargid=kwd-294769683307&hydadcr=22426_13336633&tag=googcana-20&ref=pd_sl_738015uq0b_e " target="_blank"> want to play the lottery?, go on kindle and choose a random book and suffer </a>
 </body>

@@ -17,6 +17,7 @@
 <form action="lab5-webservers.php" method = "post">
     <p> books name: <input type="text" name="book_name" /></p>   
     <p> books genre: <input type="text" genre="genre_type" /></p>
+    <input type="text" restrict onblur="field()" id="genre" pattern="(fantasy|modern|mystery|sci-fi)">
     <input type="submit">                    
 </form>
 

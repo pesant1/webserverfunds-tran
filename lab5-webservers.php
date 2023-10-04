@@ -14,7 +14,7 @@
 <p><?= $_SERVER['HTTP_USER_AGENT'] ?></p>
 
 <h1> Task 3.3.5 (less of eyesore) </h1>
-<form action="get-book.php" method = "get">
+<form action="get-book.php" method = "post">
 
 
     <p> Enter your name: <input type="text" id="name" name="peoplename" /></p> 

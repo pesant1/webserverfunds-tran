@@ -18,6 +18,6 @@
 
 <p> Hello <?= htmlspecialchars($_GET['peoplename']) ?></p>
 <p> The name of book entered was: <?= htmlspecialchars($_GET['book_name']) ?></p>
-<p> The genre of the book entered was: <?=htmlspecialchars($_GET['genretype']) ?></p>
+<p> The genre of the book entered was: <?= htmlspecialchars($_GET['genretype']) ?></p>
 
 </body>

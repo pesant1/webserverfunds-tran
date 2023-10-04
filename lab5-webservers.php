@@ -20,7 +20,7 @@
     <input type="submit">                    
 </form>
 
-<h1> Task 3.3 (Forms get) </h1>
+<h1> Task 3.3 (Forms post) </h1>
 <form action="get-book.php" method = "post">
     <p> books name: <input type="text" name="book_name" /></p>   
     <p> books genre: <input type="text" name="genre_type" /></p>

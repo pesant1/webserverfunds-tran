@@ -15,12 +15,14 @@
 
 <h1> Task 3.3.5 (less of eyesore) </h1>
 <form action="get-book.php" method = "get">
-    <p> books name: <input type="text" name="book_name" /></p>   
-    <p> books genre: <input type="text" name="genre_type" /></p>
+
+
+    <p> Enter your name: <input type="text" id="name" name="peoplename" /></p> 
+    <p> books name: <input type="text" id="bookname" name="book_name" /></p>   
       
     <div> Select your genre:<br />
     <label for="genre">genre:</label>
-            <select id="genre">
+            <select id="genre" name="genrename">
                 <option value="fantasy">Fantasy</option>
                 <option value="sci-fi">Sci-Fi</option>
                 <option value="modern">Modern</option>

@@ -6,9 +6,9 @@
 
 <body>
 
-<body style="background-color:powderblue;">
+<body style="background-color:gray;">
 
 <p> Hello, welcome to Lab 5 </p>
  
-<p><?= var_dump($_SERVER) ?></p>
+<p><?= $_SERVER['HTTP_USER_AGENT'] ?></p>
 </body>

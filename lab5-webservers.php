@@ -22,7 +22,7 @@
       
     <div> Select your genre:<br />
     <label for="genre">genre:</label>
-            <select id="genre" name="genrename">
+            <select id="genre" name="genretype">
                 <option value="fantasy">Fantasy</option>
                 <option value="sci-fi">Sci-Fi</option>
                 <option value="modern">Modern</option>

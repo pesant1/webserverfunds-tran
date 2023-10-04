@@ -6,7 +6,7 @@
 
 <body>
 
-<body style="backgroung-color:black;">
+<body style="background-color:powderblue;">
 
 <p> Hello, welcome to Lab 5 </p>
  

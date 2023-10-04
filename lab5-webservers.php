@@ -16,8 +16,9 @@
 <h1> Task 3.3 (Forms-post) </h1>
 <form action="get-book.php" method = "post">
     <p> books name: <input type="text" name="book_name" /></p>   
-    <p> books genre: <input type="text" genre="genre_type" /></p>
+    <p> books genre: <input type="text" name="genre_type" /></p>
     <input type="submit">                    
 </form>
+
 
 </body>

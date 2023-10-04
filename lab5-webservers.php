@@ -13,19 +13,22 @@
 <h1> Task 3.2.5 (User Agent) </h1>
 <p><?= $_SERVER['HTTP_USER_AGENT'] ?></p>
 
-<h1> Task 3.3 (Forms get) </h1>
+<h1> Task 3.3.5 (less of eyesore) </h1>
 <form action="get-book.php" method = "get">
     <p> books name: <input type="text" name="book_name" /></p>   
     <p> books genre: <input type="text" name="genre_type" /></p>
-    <input type="submit">                    
+    <input type="submit">      
 </form>
 
-<h1> Task 3.3 (Forms post) </h1>
-<form action="get-book.php" method = "post">
-    <p> books name: <input type="text" name="book_name" /></p>   
-    <p> books genre: <input type="text" name="genre_type" /></p>
-    <input type="submit">                    
-</form>
-
+<div> Select your genre:<br />
+    <label for="genre">genre:</label>
+            <select id="genre">
+                <option value="fantasy">Fantasy</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="modern">Modern</option>
+            <option value="mystery">Mystery</option>
+            </select>
+            <input type="submit">
+</div>
 
 </body>

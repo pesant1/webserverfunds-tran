@@ -17,10 +17,8 @@
 <form action="get-book.php" method = "get">
     <p> books name: <input type="text" name="book_name" /></p>   
     <p> books genre: <input type="text" name="genre_type" /></p>
-    <input type="submit">      
-</form>
-
-<div> Select your genre:<br />
+      
+    <div> Select your genre:<br />
     <label for="genre">genre:</label>
             <select id="genre">
                 <option value="fantasy">Fantasy</option>
@@ -28,7 +26,9 @@
                 <option value="modern">Modern</option>
             <option value="mystery">Mystery</option>
             </select>
-            <input type="submit">
-</div>
+    </div>
+
+    <input type="submit"> 
+</form>
 
 </body>

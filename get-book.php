@@ -10,7 +10,7 @@
  
 
 <h1> Task 3.3 (Forms-get) </h1>
-<form action="get-book.php" method = "get">
+<form action="get-book.php" method = "post">
     <p> books name: <input type="text" name="book_name" /></p>   
     <p> books genre: <input type="text" genre="genre_type" /></p>
     <input type="submit">                    

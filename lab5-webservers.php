@@ -13,8 +13,8 @@
 <h1> Task 3.2.5 (User Agent) </h1>
 <p><?= $_SERVER['HTTP_USER_AGENT'] ?></p>
 
-<h1> Task 3.3 (Forms-post) </h1>
-<form action="get-book.php" method = "post">
+<h1> Task 3.3 (Forms-post and get) </h1>
+<form action="get-book.php" method = "get">
     <p> books name: <input type="text" name="book_name" /></p>   
     <p> books genre: <input type="text" name="genre_type" /></p>
     <input type="submit">                    

@@ -4,7 +4,7 @@
     <title>Lab7: PHP and SQL Response</title>
 
     <?php
-        $book_name = htmlspecialchars ($_POST["bookname"]);
+        $book_name = htmlspecialchars ($_GET["bookname"]);
         $server = "localhost";
         $username = "php";
         $password = "password1";

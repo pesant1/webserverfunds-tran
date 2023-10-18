@@ -28,7 +28,7 @@
     <br>
     <h1> Book search </h1>
 
-    <form action="lab7response.php" method = "post">
+    <form action="lab7response.php" method = "get">
         <p> Enter your name: <input type="text" id="name" name="peoplename" /></p> 
         <p> books name: <input type="text" id="bookname" name="book_name" /></p>   
         

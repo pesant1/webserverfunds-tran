@@ -32,14 +32,13 @@
         <p> Enter your name: <input type="text" id="name" name="peoplename" /></p> 
         <p> books name: <input type="text" id="bookname" name="book_name" /></p>   
         
-        <div> Select your genre:<br />
-
+        <div> Available books:<br/>
         <label for="genre">book:</label>
                 <select id="bookname" name="namebook">
                 <?php
                     foreach($result as $row) 
                     { 
-                        echo "author: {$row["author"]} | book: {$row["book_name"]} | rating: {$row["rating"]}\n";
+                        echo "book: {$row["book_name"]}\n <br>";
                     }
                     mysqli_close($conn);
                 ?>

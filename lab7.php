@@ -16,6 +16,8 @@
             die("Connection failed: {mysqli_connect_error()}");
             echo "Connected successfully";
         }
+        $sql = "select * from <>;";
+        $result = mysqli_query($conn, $sql);
     ?>
 </head>
 

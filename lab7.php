@@ -34,7 +34,7 @@
         
         <div> Available books:<br/>
         <label for="genre">book:</label>
-                <select id="bookname" name="namebook">
+                <select id="bookname" name="bookname">
                 <?php
                     foreach($result as $row) 
                     { 

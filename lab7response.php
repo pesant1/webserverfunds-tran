@@ -19,7 +19,7 @@
             echo "Connected successfully";
         }
 
-        $sql = "select stuff, stuff and more stuff={$book_name};";
+        $sql = "select * from  books where id = {$id};";
         $result = mysqli_query($conn, $sql);
     ?>
 

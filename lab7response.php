@@ -17,6 +17,9 @@
             die("Connection failed: {mysqli_connect_error()}");
             echo "Connected successfully";
         }
+
+        $sql = "select stuff, stuff and more stuff='{$book_name}';";
+        $result = mysqli_query($conn, $sql);
     ?>
 </head>
 
@@ -32,7 +35,7 @@
 
 <h1> Response of selection </h1>
 
-You chosed the book: <?= $id ?>. <br/>
+You chosed the book: <?= $book_name ?>. <br/>
 <?php
     foreach($result as $row) 
     { 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <title>Lab7: PHP and SQL Response</title>
 
@@ -40,8 +40,6 @@ You chosed the book: <?= $id ?>. <br/>
     }
     mysqli_close($conn);
     ?>
-<p> Hello <?= htmlspecialchars($_POST['peoplename']) ?></p>
-<p> The name of book entered was: <?= htmlspecialchars($_POST['book_name']) ?></p>
-<p> The genre of the book entered was: <?= htmlspecialchars($_POST['genretype']) ?></p>
 
 </body>
+</html>

@@ -18,6 +18,9 @@
         }
         $sql = "select * from books;";
         $result = mysqli_query($conn, $sql);
+
+        echo mysqli_num_rows($result);
+        echo mysqli_error($conn);
     ?>
 </head>
 

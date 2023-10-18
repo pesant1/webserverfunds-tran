@@ -38,7 +38,7 @@
                 <?php
                     foreach($result as $row) 
                     { 
-                        echo "<option value='{$row['book_name']}</option>'\n <br>";
+                        echo "<option value='{$row['book_name']}'</option>\n <br>";
                     }
                     mysqli_close($conn);
                 ?>

@@ -30,8 +30,16 @@
 <p><?= var_dump($_GET) ?></p> 
 <p><?= var_dump($_POST) ?></p>
 
-<h1> Task 3.3.5 (User friendly way) </h1>
+<h1> Response of selection </h1>
 
+You chosed the book: <?= $id ?>. <br/>
+<?php
+    foreach($result as $row) 
+    { 
+        echo "{$row['author']} authored {$row['book_name']}\n <br>";
+    }
+    mysqli_close($conn);
+    ?>
 <p> Hello <?= htmlspecialchars($_POST['peoplename']) ?></p>
 <p> The name of book entered was: <?= htmlspecialchars($_POST['book_name']) ?></p>
 <p> The genre of the book entered was: <?= htmlspecialchars($_POST['genretype']) ?></p>

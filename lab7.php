@@ -9,40 +9,47 @@
         $password = "password1";
         $database = "books";
         $conn = mysqli_connect($server, $username, $password, $database);
-        
-        if (!$conn){
-        die("Connection failed: {mysqli_connect_error()}");
-        echo "Connected successfully";
+
+        //Connection checker
+        if (!$conn)
+        {
+            die("Connection failed: {mysqli_connect_error()}");
+            echo "Connected successfully";
         }
     ?>
 </head>
 
 <body>
+    <body style="background-color:gray;">
 
-<body style="background-color:gray;">
+    <h1> 4.2 Integrate SQL Funcitonality </h1>
+    <br>
+    <h1> Book search </h1>
 
-<p> 4.2 Integrate SQL Funcitonality </p>
-<br>
-<h1> Book search </h1>
+    <form action="get-book.php" method = "post">
+        <p> Enter your name: <input type="text" id="name" name="peoplename" /></p> 
+        <p> books name: <input type="text" id="bookname" name="book_name" /></p>   
+        
+        <div> Select your genre:<br />
 
+        <label for="genre">genre:</label>
+                <select id="genre" name="genretype">
+                    <option value="fantasy">Fantasy</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="modern">Modern</option>
+                <option value="mystery">Mystery</option>
 
+                <?php
+                    foreach($result as $row) 
+                    { 
+                        echo "author: {$row["author"]} | book: {$row["book_name"]} | rating: {$row["rating"]}\n";
+                    }
+                    mysqli close($conn);
+                ?>
+                </select>
+                <br>
+        </div>
 
-
-<form action="get-book.php" method = "post">
-    <p> Enter your name: <input type="text" id="name" name="peoplename" /></p> 
-    <p> books name: <input type="text" id="bookname" name="book_name" /></p>   
-      
-    <div> Select your genre:<br />
-    <label for="genre">genre:</label>
-            <select id="genre" name="genretype">
-                <option value="fantasy">Fantasy</option>
-                <option value="sci-fi">Sci-Fi</option>
-                <option value="modern">Modern</option>
-            <option value="mystery">Mystery</option>
-            </select>
-    </div>
-
-    <input type="submit"> 
-</form>
-
+        <input type="submit"> 
+    </form>
 </body>

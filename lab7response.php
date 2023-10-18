@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Lab7: PHP and SQL Response</title>
-
+    <h1> Task 3.3 (content of array get and post) </h1>
+    
     <?php
         $book_name = htmlspecialchars ($_GET["bookname"]);
         $server = "localhost";
@@ -21,6 +22,7 @@
         $sql = "select stuff, stuff and more stuff='{$book_name}';";
         $result = mysqli_query($conn, $sql);
     ?>
+
 </head>
 
 <body>
@@ -28,7 +30,7 @@
 <body style="background-color:gray;">
  
 
-<h1> Task 3.3 (content of array get and post) </h1>
+
 
 <p><?= var_dump($_GET) ?></p> 
 <p><?= var_dump($_POST) ?></p>

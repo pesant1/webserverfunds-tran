@@ -28,19 +28,14 @@
     <br>
     <h1> Book search </h1>
 
-    <form action="get-book.php" method = "post">
+    <form action="lab7response.php" method = "post">
         <p> Enter your name: <input type="text" id="name" name="peoplename" /></p> 
         <p> books name: <input type="text" id="bookname" name="book_name" /></p>   
         
         <div> Select your genre:<br />
 
-        <label for="genre">genre:</label>
-                <select id="genre" name="genretype">
-                    <option value="fantasy">Fantasy</option>
-                    <option value="sci-fi">Sci-Fi</option>
-                    <option value="modern">Modern</option>
-                <option value="mystery">Mystery</option>
-
+        <label for="genre">book:</label>
+                <select id="bookname" name="namebook">
                 <?php
                     foreach($result as $row) 
                     { 

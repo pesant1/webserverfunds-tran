@@ -5,7 +5,7 @@
     <h1> Task 3.3 (content of array get and post) </h1>
 
     <?php
-        $book_name = (int)($_GET["bookname"]);
+        $id = (int)($_GET["bookname"]);
         $server = "localhost";
         $username = "php";
         $password = "password1";

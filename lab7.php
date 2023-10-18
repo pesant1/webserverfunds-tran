@@ -18,9 +18,6 @@
         }
         $sql = "select * from books;";
         $result = mysqli_query($conn, $sql);
-
-        echo mysqli_num_rows($result);
-        echo mysqli_error($conn);
     ?>
 </head>
 
@@ -49,7 +46,7 @@
                     { 
                         echo "author: {$row["author"]} | book: {$row["book_name"]} | rating: {$row["rating"]}\n";
                     }
-                    mysqli close($conn);
+                    mysqli_close($conn);
                 ?>
                 </select>
                 <br>

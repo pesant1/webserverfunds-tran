@@ -45,7 +45,24 @@
                 </select>
                 <br>
         </div>
-
         <input type="submit"> 
     </form>
+
+    <h1> Books rating to be changed </h1>
+    <form action="bookchanged.php" method="get">
+        <select id="book" name="book">
+        <?php
+            foreach($result as $row) 
+                { 
+                    echo "<option value='{$row['id']}'>{$row['book_name']}</option>\n";
+                }
+                    mysqli_close($conn);
+        ?>
+
+        <input type ="number" required id="rating" name="rating">
+        <input type="submit"> 
+    </form>
+
+
+
 </body>

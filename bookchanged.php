@@ -2,10 +2,11 @@
 <html>
 <head>
     <title>Lab7: PHP and SQL Response</title>
-    <h1> Task 3.3 (content of array get and post) </h1>
+
 
     <?php
-        $id = (int)($_GET["bookname"]);
+        $id = (int)($_GET["book"]);
+        $change =  (int)($_GET["rating"]); 
         $server = "localhost";
         $username = "php";
         $password = "password1";
@@ -19,8 +20,13 @@
             echo "Connected successfully";
         }
 
+
+        $sql = "UPDATE books SET rating = {$change} where id={$id};";
+        $result = mysqli_query($conn, $sql);
+
         $sql = "select * from  books where id = {$id};";
         $result = mysqli_query($conn, $sql);
+
     ?>
 
 </head>
@@ -30,12 +36,7 @@
 <body style="background-color:gray;">
  
 
-
-
-<p><?= var_dump($_GET) ?></p> 
-<p><?= var_dump($_POST) ?></p>
-
-<h1> Response of selection </h1>
+<h1> The following book rating changed </h1>
 
 You chosed the book: <?= $id ?>. <br/>
 <?php

@@ -58,7 +58,8 @@
                 }
                     mysqli_close($conn);
         ?>
-
+        </select>
+        
         <input type="number" required id="rating" name="rating">
         <input type="submit"> 
     </form>

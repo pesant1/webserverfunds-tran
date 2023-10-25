@@ -61,8 +61,8 @@
         ?>
         </select>
 
-        <input type="number" required id="rating" name="rating">
-        <input type="submit"> 
+        <input type="number" required id="rating" name="rating"/>
+        <input type="submit"/> 
     </form>
 
 </body>

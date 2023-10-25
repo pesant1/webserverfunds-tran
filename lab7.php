@@ -45,7 +45,7 @@
                 </select>
                 <br>
         </div>
-        <input type="submit"> 
+        <input type="submit"/> 
     </form>
 
     <h1> Books rating to be changed </h1>

@@ -48,7 +48,7 @@
         <input type="submit"/> 
     </form>
 
-    <div> Books rating to be changed <br/>
+    <h1> Books rating to be changed </h1>
     <form action="bookchanged.php" method="get">
         <label for="rate">rating to be changed</label>
         <select id="book" name="book">
@@ -60,9 +60,9 @@
                     mysqli_close($conn);
         ?>
         </select>
-        </div>
-        <input type="number" required id="rating" name="rating"/>
-        <input type="submit"/> 
+
+        <input type="number" required id="rating" name="rating">
+        <input type="submit"> 
     </form>
 
 </body>

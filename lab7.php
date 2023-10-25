@@ -50,6 +50,7 @@
 
     <h1> Books rating to be changed </h1>
     <form action="bookchanged.php" method="get">
+        <label for="rate">rating to be changed</label>
         <select id="book" name="book">
         <?php
             foreach($result as $row) 
@@ -59,7 +60,7 @@
                     mysqli_close($conn);
         ?>
         </select>
-        
+
         <input type="number" required id="rating" name="rating">
         <input type="submit"> 
     </form>

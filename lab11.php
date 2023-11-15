@@ -6,7 +6,7 @@
 
 
     <script>
-        function (readings) 
+        function readings() 
         {
             const xhttp = new XMLHttpRequest();
             xhttp.onload = function() 

@@ -29,7 +29,7 @@
 
     else if ($stuff == "reading")
     {
-        $raw = `./bme280`; 
+        $raw = `/var/www/html/bme280`; 
         
         $deserialized = json_decode($raw, true);     
     }

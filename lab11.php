@@ -26,9 +26,6 @@
         `gpio write 7 0`;
     }
 
-?>
-
-<?php 
     $data = $_POST["stuff"]
 
     if ($stuff == "reading")

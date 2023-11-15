@@ -8,8 +8,8 @@
     $raw = `./bme280`;   
     $deserialized = json_decode($raw, true); 
 
-echo "temperature = {$deserialized["temperature"]} <br>"; 
-echo "pressure =  {$deserialized["pressure"]} <br>";
-echo "altitude =  {$deserialized["altitude"]<br>"; 
+    echo "temperature = {$deserialized["temperature"]} <br>"; 
+    echo "pressure =  {$deserialized["pressure"]} <br>";
+    echo "altitude =  {$deserialized["altitude"]} <br>"; 
 ?>
 </body>

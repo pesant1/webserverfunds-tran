@@ -10,8 +10,7 @@
 
 echo "temperature = {$deserialized["temperature"]}" <br>; 
 echo "pressure =  {$deserialized["pressure"]}" <br>;
-
-echo "altitude =  echo $deserialized["altitude"]"<br>; 
+echo "altitude =  {$deserialized["altitude"]"<br>; 
 
 ?></p> 
 </body>

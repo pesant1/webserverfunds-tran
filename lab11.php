@@ -2,23 +2,6 @@
 
 <head>
     <title>Lab11:GPIO - Tran</title>
-
-
-
-    <script>
-        function readings() 
-        {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() 
-            {
-                document.getElementById("demo").innerHTML =
-                this.responseText;
-            }
-            xhttp.open("GET", "ajax_info.txt");
-            xhttp.send();
-        }
-        </script>
-    
 </head>
 
 <body>
@@ -29,7 +12,6 @@
  
 <?php 
     $state =  $_POST["state"];
-    $data = $_POST["stuff"];
 
     if ($state == "toggle")
     {
@@ -42,13 +24,6 @@
     else if ($state == "0")
     {
         `gpio write 7 0`;
-    }
-
-    else if ($stuff == "reading")
-    {
-        $raw = `/var/www/html/bme280`; 
-        
-        $deserialized = json_decode($raw, true);     
     }
 ?>
 
@@ -72,9 +47,19 @@
 </form>
 
 <p> get bme280 readings </p>
-<form method="post">
+<form action="lab11readings.php" method = "post">
     <input type="hidden" name="stuff" value="reading"/> 
-    <button type="button" onclick="readings()">submit</button>
+    <input type="submit" value="toggle"/>
+    <?php
+    $state =  $_POST["state"];
+    
+    if($stuff == "reading")
+    {
+        $raw = `/var/www/html/bme280`; 
+        
+        $deserialized = json_decode($raw, true);     
+    }
+    ?>
 </form>
 
 temperature = <?php echo $deserialized["temperature"]; ?>

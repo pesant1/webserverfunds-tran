@@ -37,7 +37,9 @@
         
         $deserialized = json_decode($raw, true); 
         
-        echo $deserialized["temperature"];     
+        $temperature = echo $deserialized["temperature"];
+        $pressure = echo $deserialized["pressure"]; 
+        $altitude = echo $deserialized["altitude"];      
     }
 ?>
 
@@ -65,4 +67,5 @@
     <input type="hidden" name="stuff" value="reading"/> 
     <input type="submit" value="toggle"/> 
 </form>
+
 </body>

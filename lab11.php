@@ -2,6 +2,23 @@
 
 <head>
     <title>Lab11:GPIO - Tran</title>
+
+
+
+    <script>
+        function (readings) 
+        {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() 
+            {
+                document.getElementById("result").innerHTML =
+                this.responseText;
+            }
+            xhttp.open("GET", "lab11readings.php");
+            xhttp.send();
+        }
+        </script>
+    
 </head>
 
 <body>
@@ -12,6 +29,7 @@
  
 <?php 
     $state =  $_POST["state"];
+    $data = $_POST["stuff"];
 
     if ($state == "toggle")
     {
@@ -41,25 +59,14 @@
 </form>
 
 <p> Toggle </p>
-<form method = "post">
+<form method = "get">
     <input type="hidden" name="state" value="toggle"/> 
     <input type="submit" value="toggle"/> 
 </form>
 
 <p> get bme280 readings </p>
-<form action="lab11readings.php" method = "get">
-    <input type="hidden" name="stuff" value="reading"/> 
-    <input type="submit" value="toggle"/>
-    <?php
-    $state =  $_GET["state"];
+    <button type="button" onclick="readings()">refresh</button>
 
-    if($stuff == "reading")
-    {
-        $raw = `/var/www/html/bme280`; 
-        
-        $deserialized = json_decode($raw, true);     
-    }
-    
-    ?>
-</form>
+<span id="result"></span>
+
 </body>

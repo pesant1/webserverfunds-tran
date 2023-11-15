@@ -29,21 +29,16 @@
 ?>
 
 <?php 
-$data = $_POST["stuff"]
+    $data = $_POST["stuff"]
 
-if ($stuff == "reading")
-{
-    $raw = `./bme280`; 
-
-    echo $raw; 
-    
-    $deserialized = json_decode($raw, true); 
-    
-    var_dump($deserialized); 
-    
-    echo $deserialized["temperature"];     
-}
-
+    if ($stuff == "reading")
+    {
+        $raw = `./bme280`; 
+        
+        $deserialized = json_decode($raw, true); 
+        
+        echo $deserialized["temperature"];     
+    }
 ?>
 
 

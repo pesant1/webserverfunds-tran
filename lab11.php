@@ -12,7 +12,7 @@
  
 <?php 
     $state =  $_POST["state"];
-
+    
     if ($state == "toggle")
     {
         `gpio toggle 7`;
@@ -25,6 +25,24 @@
     {
         `gpio write 7 0`;
     }
+
+?>
+
+<?php 
+$data = $_POST["stuff"]
+
+if ($stuff == "reading")
+{
+    $raw = `./bme280`; 
+
+    echo $raw; 
+    
+    $deserialized = json_decode($raw, true); 
+    
+    var_dump($deserialized); 
+    
+    echo $deserialized["temperature"];     
+}
 
 ?>
 

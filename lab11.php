@@ -27,7 +27,7 @@
         
         echo $deserialized["temperature"];     
     }
-    if ($state == "toggle")
+    else if ($state == "toggle")
     {
         `gpio toggle 7`;
     }

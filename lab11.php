@@ -59,7 +59,7 @@
         
         $deserialized = json_decode($raw, true);     
     }
-    var_dump($deserialized); 
+    
     ?>
 </form>
 </body>

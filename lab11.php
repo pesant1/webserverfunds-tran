@@ -32,11 +32,7 @@
     {
         $raw = `./bme280`; 
         
-        $deserialized = json_decode($raw, true); 
-        
-        $temperature = echo $deserialized["temperature"];
-        $pressure = echo $deserialized["pressure"]; 
-        $altitude = echo $deserialized["altitude"];      
+        $deserialized = json_decode($raw, true);     
     }
 ?>
 
@@ -64,5 +60,9 @@
     <input type="hidden" name="stuff" value="reading"/> 
     <input type="submit" value="toggle"/> 
 </form>
+
+temperature = <?php echo $deserialized["temperature"]; ?>
+pressure = <?php echo $deserialized["temperature"]; ?>
+altitude = <?php echo $deserialized["temperature"]; ?> 
 
 </body>

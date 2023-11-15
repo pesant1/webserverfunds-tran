@@ -52,20 +52,14 @@
     <input type="submit" value="toggle"/>
     <?php
     $state =  $_POST["state"];
-    
+
     if($stuff == "reading")
     {
         $raw = `/var/www/html/bme280`; 
         
         $deserialized = json_decode($raw, true);     
     }
+    var_dump($deserialized); 
     ?>
 </form>
-
-temperature = <?php echo $deserialized["temperature"]; ?>
-<br>
-pressure = <?php echo $deserialized["pressure"]; ?>
-<br>
-altitude = <?php echo $deserialized["altitude"]; ?> 
-
 </body>

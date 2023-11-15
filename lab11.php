@@ -13,6 +13,20 @@
 <?php 
     $state =  $_POST["state"];
 
+    $data = $_POST["stuff"]
+
+    if ($stuff == "reading")
+    {
+        $raw = `./bme280`; 
+
+        echo $raw; 
+        
+        $deserialized = json_decode($raw, true); 
+        
+        var_dump($deserialized); 
+        
+        echo $deserialized["temperature"];     
+    }
     if ($state == "toggle")
     {
         `gpio toggle 7`;
@@ -25,6 +39,7 @@
     {
         `gpio write 7 0`;
     }
+
 ?>
 
 
@@ -46,4 +61,9 @@
     <input type="submit" value="toggle"/> 
 </form>
 
+<p> bme280 readings </p>
+<form method="post">
+    <input type="hidden" name="stuff" value="reading"/> 
+    <input type="submit" value="toggle"/> 
+</form>
 </body>

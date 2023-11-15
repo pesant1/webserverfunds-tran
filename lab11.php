@@ -61,7 +61,9 @@
 </form>
 
 temperature = <?php echo $deserialized["temperature"]; ?>
+<br>
 pressure = <?php echo $deserialized["temperature"]; ?>
+<br>
 altitude = <?php echo $deserialized["temperature"]; ?> 
 
 </body>

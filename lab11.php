@@ -28,7 +28,7 @@
 
     $data = $_POST["stuff"]
 
-    if ($stuff == "reading")
+    else if ($stuff == "reading")
     {
         $raw = `./bme280`; 
         

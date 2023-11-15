@@ -12,7 +12,8 @@
  
 <?php 
     $state =  $_POST["state"];
-    
+    $data = $_POST["stuff"];
+
     if ($state == "toggle")
     {
         `gpio toggle 7`;
@@ -25,8 +26,6 @@
     {
         `gpio write 7 0`;
     }
-
-    $data = $_POST["stuff"]
 
     else if ($stuff == "reading")
     {

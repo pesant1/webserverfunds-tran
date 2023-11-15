@@ -47,11 +47,11 @@
 </form>
 
 <p> get bme280 readings </p>
-<form action="lab11readings.php" method = "post">
+<form action="lab11readings.php" method = "get">
     <input type="hidden" name="stuff" value="reading"/> 
     <input type="submit" value="toggle"/>
     <?php
-    $state =  $_POST["state"];
+    $state =  $_GET["state"];
 
     if($stuff == "reading")
     {

@@ -13,21 +13,7 @@
 <?php 
     $state =  $_POST["state"];
 
-    $data = $_POST["stuff"]
-
-    if ($stuff == "reading")
-    {
-        $raw = `./bme280`; 
-
-        echo $raw; 
-        
-        $deserialized = json_decode($raw, true); 
-        
-        var_dump($deserialized); 
-        
-        echo $deserialized["temperature"];     
-    }
-    else if ($state == "toggle")
+    if ($state == "toggle")
     {
         `gpio toggle 7`;
     }

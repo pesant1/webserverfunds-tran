@@ -32,19 +32,19 @@
 <p> On </p>
 <form method = "post">
 
-    <input type="submit" value="1"/> 
+    <input type="submit" name="state" value="1"/> 
 </form>
 
 <p> Off </p>
 <form method = "post">
 
-    <input type="submit" value="0"/> 
+    <input type="submit" name="state" value="0"/> 
 </form>
 
 <p> Toggle </p>
 <form method = "post">
 
-    <input type="submit" value="toggle"/> 
+    <input type="submit" name="state" value="toggle"/> 
 </form>
 
 </body>

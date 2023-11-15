@@ -30,21 +30,24 @@
 
 
 <p> On </p>
-<form method = "post">
+<form method="post">
 
-    <input type="submit" name="state" value="1"/> 
+    <input type="hidden" name="state" value="1"/> 
+    <input type="submit" value="toggle"/> 
 </form>
 
 <p> Off </p>
 <form method = "post">
 
-    <input type="submit" name="state" value="0"/> 
+    <input type="hidden" name="state" value="0"/> 
+    <input type="submit" value="toggle"/> 
 </form>
 
 <p> Toggle </p>
 <form method = "post">
 
-    <input type="submit" name="state" value="toggle"/> 
+    <input type="hidden" name="state" value="toggle"/> 
+    <input type="submit" value="toggle"/> 
 </form>
 
 </body>

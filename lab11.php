@@ -2,6 +2,23 @@
 
 <head>
     <title>Lab11:GPIO - Tran</title>
+
+
+
+    <script>
+        function readings() 
+        {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() 
+            {
+                document.getElementById("demo").innerHTML =
+                this.responseText;
+            }
+            xhttp.open("GET", "ajax_info.txt");
+            xhttp.send();
+        }
+        </script>
+    
 </head>
 
 <body>
@@ -54,16 +71,16 @@
     <input type="submit" value="toggle"/> 
 </form>
 
-<p> bme280 readings </p>
+<p> get bme280 readings </p>
 <form method="post">
     <input type="hidden" name="stuff" value="reading"/> 
-    <input type="submit" value="toggle"/> 
+    <button type="button" onclick="readings()">submit</button>
 </form>
 
 temperature = <?php echo $deserialized["temperature"]; ?>
 <br>
-pressure = <?php echo $deserialized["temperature"]; ?>
+pressure = <?php echo $deserialized["pressure"]; ?>
 <br>
-altitude = <?php echo $deserialized["temperature"]; ?> 
+altitude = <?php echo $deserialized["altitude"]; ?> 
 
 </body>

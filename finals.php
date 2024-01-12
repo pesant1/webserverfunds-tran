@@ -30,7 +30,7 @@
     <p><?= $_SERVER['REMOTE_ADDR'] ?></p>
 
     <form action="query.php" method = "get">
-    <p> Enter your search: <input type="text" id="search" name="search" /></p> 
+    <p> Enter your search: <input type="text" required id="search" name="search" /></p> 
     <input type="submit" value="please"/> 
     
 

@@ -14,7 +14,7 @@
 
 
 <p><?= var_dump($_GET) ?></p> 
-<p><?= var_dump($_SERVER) ?></p>
+<p><?= var_dump($_SERVER['REMOTE_ADDR']) ?></p>
 
 
 

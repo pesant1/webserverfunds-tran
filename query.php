@@ -39,7 +39,7 @@
 <p><?= var_dump($_SERVER['REMOTE_ADDR']) ?></p>
 
 <php
-    $sql = "INSERT INTO finals (search, ip) VALUES ({$search}, {$ip})";
+    $sql = "INSERT INTO finals (search, ip) VALUES ('$search', '$ip')";
     mysqli_close($conn);        
     ?>  
 

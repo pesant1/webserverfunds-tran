@@ -38,6 +38,7 @@
 
 <php
     $sql = "INSERT INTO finals (search, ip) VALUES ('{$search}', '{$ip}');";
+    $result = mysqli_query($conn, $sql);
     mysqli_close($conn);        
     ?>  
 

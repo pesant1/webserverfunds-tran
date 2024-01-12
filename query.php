@@ -25,7 +25,7 @@
         $result = mysqli_query($conn, $sql);
         mysqli_close($conn);          
 
-        header("Location: https://google.ca/q=$search");
+        header("Location: https://google.ca/search?q=$search");
 
     ?>    
 

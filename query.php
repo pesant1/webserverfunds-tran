@@ -8,7 +8,6 @@
         $ip = ($_SERVER['REMOTE_ADDR']); 
         $search = ($_GET["search"]);
 
-        $id = (int)($_GET["bookname"]);
         $server = "localhost";
         $username = "php";
         $password = "password1";

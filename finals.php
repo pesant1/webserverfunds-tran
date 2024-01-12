@@ -36,7 +36,6 @@
     $sql = "INSERT INTO finals (search, ip) VALUES ('$id', '$_SERVER['REMOTE_ADDR']');"
     mysqli_close($conn);        
     ?>  
-    <input type="submit"/> 
     </form>
     
 </body>

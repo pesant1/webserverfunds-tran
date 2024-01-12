@@ -31,14 +31,10 @@
 
     <form action="query.php" method = "get">
         <p> Enter your search: <input type="text" id="search" name="search" /></p> 
-        <?php
-            foreach($result as $row) 
-                { 
-                    echo "<option value='{$row['search']}'>{$row['ip']}</option>\n";
-                }
-                    mysqli_close($conn);
-        ?>
-        </select>     
+    <?php
+        $sql = "INSERT INTO finals (search, ip) VALUES ('$id', '$_SERVER['REMOTE_ADDR']');";
+        mysqli_close($conn);
+    ?>        
         
         <input type="submit"/> 
     </form>

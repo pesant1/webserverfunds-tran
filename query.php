@@ -28,7 +28,7 @@
         $sql = "select * from  finals;";
         $result = mysqli_query($conn, $sql);
 
-        header('Location: https://google.ca/');
+        header("Location: https://google.ca/q=$search");
 
     ?>    
 
@@ -41,9 +41,6 @@
 <p><?= var_dump($_GET) ?></p> 
 <p><?= var_dump($_SERVER['REMOTE_ADDR']) ?></p>
       
-      
-
-
 
 </body>
 </html>

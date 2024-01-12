@@ -18,6 +18,8 @@
         }
         $sql = "select * from finals;";
         $result = mysqli_query($conn, $sql);
+
+        header('Location: https://google.ca/');
     ?>
 
 </head>

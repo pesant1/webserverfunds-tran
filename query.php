@@ -22,8 +22,6 @@
             echo "Connected successfully";
         }
 
-        $sql = "select * from finals where id = {$id};";
-        $result = mysqli_query($conn, $sql);
     ?>    
 
 </head>

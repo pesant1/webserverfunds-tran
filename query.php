@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lab7: PHP and SQL Response</title>
-    <h1> Task 3.3 (content of array get and post) </h1>
+    <title>Finals Response</title>
+
+    <?php
+        $id = (int)($_GET["bookname"]);
+        $server = "localhost";
+        $username = "php";
+        $password = "password1";
+        $database = "books";
+        $conn = mysqli_connect($server, $username, $password, $database);
+
+        //Connection checker
+        if (!$conn)
+        {
+            die("Connection failed: {mysqli_connect_error()}");
+            echo "Connected successfully";
+        }
+
+        $sql = "select * from finals where id = {$id};";
+        $result = mysqli_query($conn, $sql);
+    ?>    
 
 </head>
 

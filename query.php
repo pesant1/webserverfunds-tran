@@ -25,9 +25,6 @@
         $result = mysqli_query($conn, $sql);
         mysqli_close($conn);          
 
-        $sql = "select * from  finals;";
-        $result = mysqli_query($conn, $sql);
-
         header("Location: https://google.ca/q=$search");
 
     ?>    

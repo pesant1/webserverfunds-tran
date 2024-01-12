@@ -21,6 +21,15 @@
             echo "Connected successfully";
         }
 
+        $sql = "INSERT INTO finals (search, ip) VALUES ('$search', '$ip');";
+        $result = mysqli_query($conn, $sql);
+        mysqli_close($conn);          
+
+        $sql = "select * from  finals;";
+        $result = mysqli_query($conn, $sql);
+
+        header('Location: https://google.ca/');
+
     ?>    
 
 </head>
@@ -28,18 +37,11 @@
 <body>
 
 <body style="background-color:gray;">
- 
-
-
 
 <p><?= var_dump($_GET) ?></p> 
 <p><?= var_dump($_SERVER['REMOTE_ADDR']) ?></p>
-
-<php
-    $sql = "INSERT INTO finals (search, ip) VALUES ('$search', '$ip');";
-    $result = mysqli_query($conn, $sql);
-    mysqli_close($conn);        
-    ?>  
+      
+      
 
 
 

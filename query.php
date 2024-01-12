@@ -4,6 +4,10 @@
     <title>Finals Response</title>
 
     <?php
+
+        $ip = ($_SERVER['REMOTE_ADDR']); 
+        $search = ($_GET["search"]);
+
         $id = (int)($_GET["bookname"]);
         $server = "localhost";
         $username = "php";
@@ -34,6 +38,10 @@
 <p><?= var_dump($_GET) ?></p> 
 <p><?= var_dump($_SERVER['REMOTE_ADDR']) ?></p>
 
+<php
+    $sql = "INSERT INTO finals (search, ip) VALUES ({$search}, {$ip})";
+    mysqli_close($conn);        
+    ?>  
 
 
 
